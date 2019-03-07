@@ -1,0 +1,17 @@
+{
+  "name": "remove-wp-block-library",
+  "version": "1.0.0",
+  "description": "Dequeues the extra css that is added when the Gutenberg editor is used. That's it.",
+  "scripts": {
+    "prebuild": "rm build/$npm_package_name.zip",
+    "build": "mkdir $npm_package_name && cp *.php -t $npm_package_name && zip -r build/$npm_package_name.zip $npm_package_name",
+    "postbuild": "rm -r $npm_package_name"
+  },
+  "keywords": [
+    "Wordpress",
+    "Plugin",
+    "Gutenberg"
+  ],
+  "author": "JCrosse",
+  "license": "ISC"
+}
